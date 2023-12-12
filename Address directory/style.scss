@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Cherry+Swash:wght@400;700&display=swap');
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Cherry Swash", cursive;
+
+}
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 5px;
+}
+// font-family: "Bellota", sans-serif; 
+// font-family: "Cherry Swash", cursive;
+@mixin flex(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.container{
+    @include flex();
+    flex-direction: column;
+    background-color: rgb(0, 0, 0);
+    margin: 2rem;
+    height: auto;
+    max-width: 98%;
+    border-radius: 1rem;
+    padding: 2rem;
+    h1{
+        text-align: center;
+        font-weight: bold;
+        text-decoration: underline;
+        text-underline-offset: 10px;
+        text-shadow: 2px 2px 5px rgb(255, 0, 0);
+        color: rgb(255, 255, 255);
+    }
+   .box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+     .input{
+        @include flex();
+        margin-top: 2rem;
+        flex-wrap: wrap;
+        color: white;
+
+        label{
+            font-size: larger;
+            text-shadow: 3px 3px 7px yellow;
+        }
+        input{
+            min-width: 25%;
+            max-width: auto;
+            height: 2rem; 
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            padding-left: 1rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+            margin: 1rem;
+            text-align: center;
+
+            @media screen and (max-width: 768px) {
+          min-width: 100%; /* Modify as needed for responsiveness */
+          margin: 0.5rem 0; /* Adjust spacing */
+        }
+        }
+    }
+   }
+   button{
+    align-items: center;
+    margin-top: 2rem;
+    min-height: 2.5rem;
+    min-width: 10rem;
+    max-height: 10rem;
+    max-width: 10rem;
+    font-size: 1.5rem;
+    background-color: white;
+    color: black;
+    outline: none;
+    box-shadow: 2px 2px 5px white;
+    border-radius: 1rem; 
+    cursor: pointer;
+       @media screen and (max-width: 768px) {
+      min-width: 100%; 
+      margin-top: 1rem; 
+    }
+   }
+}
+
+.detailbox{
+  text-align: center;
+  margin: 2rem;
+  height: auto;
+  width: auto;
+  max-width: 96%;
+  background-color: #000000;
+  color: #f5f5f5;
+  border-radius: 2rem;
+  @include flex();
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  div {
+  padding:2rem;
+  background-color: white;
+  color: black;
+  margin: 1rem;
+  border-radius: 2rem;
+  font-family: "Bellota", sans-serif; 
+  font-weight: 700;
+  text-decoration: bold;
+
+  p{
+    text-wrap: wrap;
+  }
+
+@media screen and (max-width: 768px) {
+      padding: 1rem; 
+      margin: 0.5rem; 
+    }
+
+  }
+}
